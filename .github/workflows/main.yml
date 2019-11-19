@@ -18,6 +18,5 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
       with:
-        testartifact
-        name: 
+        name: testartifact
         path: /artifacts
