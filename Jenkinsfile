@@ -3,17 +3,7 @@ import groovy.json.JsonOutput
 
 node {
     // pull request or feature branch
-    if  (env.GITHUB_REF != 'refs/heads/master') {
-        checkoutSource()
-        build()
-        unitTest()
-    } // master branch / production
-    else {
-        checkoutSource()
-        build()
-        allTests()
-        createRelease("${env.GITHUB_ACTION}-${env.GITHUB_SHA}")
-    }
+    mysh('echo Hello from Jenkins')
 }
 
 def createRelease(name) {
